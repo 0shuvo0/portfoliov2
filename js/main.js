@@ -33,6 +33,10 @@ function onScroll(selector, ops = {rootMargin: "0px 0px -100px 0px"}){
 	var els = document.querySelectorAll(selector);
 	for(var i = 0; i < els.length; i++){
 		var el = els[i];
+		if (!('IntersectionObserver' in window)) {
+			el.classList.add('active')
+			continue
+		}
 		addObserver(el, ops);
 	}
 }
