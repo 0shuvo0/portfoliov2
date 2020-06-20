@@ -33,10 +33,10 @@ function onScroll(selector, ops = {rootMargin: "0px 0px -100px 0px"}){
 	var els = document.querySelectorAll(selector);
 	for(var i = 0; i < els.length; i++){
 		var el = els[i];
-		if (!('IntersectionObserver' in window)) {
+		/*if (!('IntersectionObserver' in window)) {
 			el.classList.add('active')
 			continue
-		}
+		}*/
 		addObserver(el, ops);
 	}
 }
@@ -114,8 +114,6 @@ for(var i = 0; i < projects.length; i++){
 	projectsContainer.innerHTML += '<div class="project scroll-reveal"><div class="content-box" style="background-image: url(\'images/projects/' + p.img + '\')"><div class="content"><p>' + p.desc + '</p></div></div><a href="' + p.link + '" target="_blank" class="btn primary block tile">visit site</a></div>'
 }
 
-onScroll('.scroll-reveal');
-
 
 
 var submitBtn = $('#send');
@@ -149,3 +147,9 @@ function saveMessage(uid, email, msg){
     msg: msg
   });
 }
+
+
+window.addEventListener('DOMContentLoaded', function(){
+	onScroll('.scroll-reveal');
+	document.body.removeChild($('#loader'))
+})

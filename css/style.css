@@ -56,7 +56,7 @@ html {
 }
 
 body {
-  font-family: 'Roboto', "Poppins", Arial, sans-serif;
+  font-family: "Roboto", "Poppins", Arial, sans-serif;
 }
 
 h1 {
@@ -107,6 +107,37 @@ button, input, textarea {
   border-radius: 0;
 }
 
+#loader {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+}
+#loader:before {
+  content: "";
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 10px solid #8B12EB;
+  border-right: 10px solid #fff;
+  animation: tspin 0.5s linear infinite;
+}
+
+@keyframes tspin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
 .banner {
   min-height: 100vh;
   display: flex;
@@ -598,7 +629,6 @@ button, input, textarea {
 
 .footer {
   color: #fff;
-  background-color: #8B12EB;
   background: linear-gradient(80deg, #9713FF 50%, #8B12EB 50%);
 }
 .footer .socials {
