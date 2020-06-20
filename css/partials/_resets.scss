@@ -8,6 +8,12 @@ body{
 h1{
 	font-size: 1.5em;
 }
+a{
+	background-color: transparent;
+	-webkit-text-decoration-skip: objects;
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+}
 button, input, textarea{
 	border: none;
 	outline: none;

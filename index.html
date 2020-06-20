@@ -144,10 +144,11 @@ width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 72
 	
 	<div class="container contact-container">
 		<h1>Contact me</h1>
-		<input type="text" placeholder="Name" class="small">
-		<input type="email" placeholder="Email" class="small">
-		<textarea placeholder="Type your mesage"></textarea>
-		<button class="btn block primary">submit</button>
+		<input type="text" placeholder="Name" id="uid">
+		<input type="email" placeholder="Email" id="email">
+		<textarea placeholder="Type your mesage" id="msg"></textarea>
+		<p class="form-err"></p>
+		<button class="btn block primary" id="send">submit</button>
 	</div>
 	
 	<footer class="container footer">
@@ -160,6 +161,7 @@ width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 72
 		<p class="socials copy">&copy; - 2020</p>
 	</footer>
 	
+	<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

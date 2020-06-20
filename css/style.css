@@ -34,6 +34,18 @@
     box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.2);
   }
 }
+.fa-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -45,6 +57,13 @@ body {
 
 h1 {
   font-size: 1.5em;
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 button, input, textarea {
@@ -566,6 +585,10 @@ button, input, textarea {
 }
 .contact-container textarea {
   height: 100px;
+}
+.contact-container .form-err {
+  color: #FF0023;
+  margin: 5px 0 10px 0;
 }
 
 .footer {
