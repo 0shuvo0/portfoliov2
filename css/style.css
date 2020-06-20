@@ -51,6 +51,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", Arial, sans-serif;
 }
@@ -80,6 +84,7 @@ button, input, textarea {
   text-align: center;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.5);
   transition: box-shadow 0.2s;
+  display: inline-block;
 }
 .btn.primary {
   background-color: #8B12EB;
