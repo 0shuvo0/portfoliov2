@@ -25,10 +25,12 @@ function $(v){
 var projects = [
 	{
 		img: 'cooking.jpg',
+		link: 'https://0shuvo0.github.io/foodieshub/',
 		desc: 'Its a design of a cooking website where users can share their recipe and other peoples try it out and leave their option.',
 	},
 	{
 		img: 'blog.jpg',
+		link: 'https://0shuvo0.github.io/blog/',
 		desc: 'I blog mockup. it has cool Features like side menu, popups, card and floating inputs.',
 	},
 	{
@@ -42,11 +44,13 @@ var projects = [
 		desc: 'Postman like api client to test you backend.',
 	},
 	{
-		img: 'gallery.jpg',
-		desc: 'A responsive image gallery made using CSS grid that had pinterest like mosaic layout',
+		img: 'shadowvis.jpg',
+		link: 'https://0shuvo0.github.io/shadowvis/',
+		desc: 'A tool to visually create complex shadows.',
 	},
 	{
 		img: 'portfolio.jpg',
+		link: 'https://0shuvo0.github.io/portfoliodesign/',
 		desc: 'Responsive portfolio design to showcase your infos and crrations.',
 	},
 	{
@@ -56,22 +60,27 @@ var projects = [
 	},
 	{
 		img: 'profilecard.jpg',
+		link: 'https://0shuvo0.github.io/profilecard/',
 		desc: 'A really cool looking user profile card concept.',
 	},
 	{
 		img: 'stopwatch.jpg',
+		link: 'https://0shuvo0.github.io/stopwatch/',
 		desc: 'A fully functional stopwatch app.',
 	},
 	{
 		img: 'mountainscene.jpg',
+		link: 'https://0shuvo0.github.io/mountainscene/',
 		desc: 'A mountain scene made with HTML, CSS and a little bit of JavaScript..',
 	},
 	{
 		img: 'loginform.jpg',
+		link: 'https://0shuvo0.github.io/loginform/',
 		desc: 'Cool and modern login form.',
 	},
 	{
 		img: 'postcard.jpg',
+		link: 'https://0shuvo0.github.io/twitterpostcard/',
 		desc: 'Twitter like post card design.',
 	}
 ]
@@ -79,7 +88,7 @@ var projects = [
 var projectsContainer = $('.projects')
 for(var i = 0; i < projects.length; i++){
 	var p = projects[i]
-	projectsContainer.innerHTML += '<div class="project scroll-reveal"><div class="content-box" style="background-image: url(\'images/projects/' + p.img + '\')"><div class="content"><p>' + p.desc + '</p></div></div><button class="btn primary block tile">visit site</button></div>'
+	projectsContainer.innerHTML += '<div class="project scroll-reveal"><div class="content-box" style="background-image: url(\'images/projects/' + p.img + '\')"><div class="content"><p>' + p.desc + '</p></div></div><a href="' + p.link + '" class="btn primary block tile">visit site</a></div>'
 }
 
 
