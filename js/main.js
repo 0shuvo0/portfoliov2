@@ -107,7 +107,7 @@ var projects = [
 var projectsContainer = $('.projects')
 for(var i = 0; i < projects.length; i++){
 	var p = projects[i]
-	projectsContainer.innerHTML += '<div class="project scroll-reveal"><div class="content-box" style="background-image: url(\'images/projects/' + p.img + '\')"><div class="content"><p>' + p.desc + '</p></div></div><a href="' + p.link + '" class="btn primary block tile">visit site</a></div>'
+	projectsContainer.innerHTML += '<div class="project scroll-reveal"><div class="content-box" style="background-image: url(\'images/projects/' + p.img + '\')"><div class="content"><p>' + p.desc + '</p></div></div><a href="' + p.link + '" target="_blank" class="btn primary block tile">visit site</a></div>'
 }
 
 onScroll('.scroll-reveal');
