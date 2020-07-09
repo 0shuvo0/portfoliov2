@@ -1,17 +1,18 @@
-// Initialize Firebase (ADD YOUR OWN DATA)
+/*
+Yes I let everyone see my firebase credentials, why did you asked?
+*/
 var config = {
-  apiKey: "AIzaSyAx-GMJnaEZeslT7eOUg5cJexbhCN5caUw",
+    apiKey: "AIzaSyAx-GMJnaEZeslT7eOUg5cJexbhCN5caUw",
     authDomain: "messages-93ae7.firebaseapp.com",
     databaseURL: "https://messages-93ae7.firebaseio.com",
     projectId: "messages-93ae7",
     storageBucket: "messages-93ae7.appspot.com",
     messagingSenderId: "746022405342",
     appId: "1:746022405342:web:78d3e415ceb85195e82e4f"
-};
-firebase.initializeApp(config);
+}
+firebase.initializeApp(config)
 
-// Reference messages collection
-var messagesRef = firebase.database().ref('messages');
+var messagesRef = firebase.database().ref('messages')
 
 
 
@@ -33,10 +34,10 @@ function onScroll(selector, ops = {rootMargin: "0px 0px -100px 0px"}){
 	var els = document.querySelectorAll(selector);
 	for(var i = 0; i < els.length; i++){
 		var el = els[i];
-		/*if (!('IntersectionObserver' in window)) {
+		if(!('IntersectionObserver' in window)) {
 			el.classList.add('active')
 			continue
-		}*/
+		}
 		addObserver(el, ops);
 	}
 }
@@ -145,7 +146,7 @@ function saveMessage(uid, email, msg){
     uid: uid,
     email: email,
     msg: msg
-  });
+  })
 }
 
 
