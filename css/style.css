@@ -387,6 +387,7 @@ button, input, textarea {
   border-radius: 3px;
   margin-bottom: 20px;
   animation: draw 1s forwards;
+  animation-delay: 1s;
 }
 
 @keyframes draw {
@@ -709,6 +710,32 @@ button, input, textarea {
   animation-delay: 0.8s;
 }
 
+.main-projects {
+  margin-bottom: 30px;
+}
+
+.main-project {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.main-project .info {
+  width: 50%;
+}
+.main-project .info p {
+  font-weight: 200;
+  letter-spacing: 1px;
+  margin: 10px 0 15px 0;
+}
+
+.main-project .img {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
 .project-container h1 {
   color: #131313;
   margin-bottom: 20px;
@@ -949,6 +976,18 @@ button, input, textarea {
 
   .binfo ul li {
     width: 50%;
+  }
+
+  .main-project .info, .main-project .img {
+    width: 100%;
+  }
+
+  .main-project .info {
+    text-align: center;
+  }
+
+  .main-project .img {
+    margin: 20px;
   }
 }
 @media (max-width: 450px) {

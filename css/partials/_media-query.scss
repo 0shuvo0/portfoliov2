@@ -83,6 +83,15 @@
 	.binfo ul li{
 		width: 50%;
 	}
+	.main-project .info, .main-project .img{
+		width: 100%;
+	}
+	.main-project .info{
+		text-align: center;
+	}
+	.main-project .img{
+		margin: 20px;
+	}
 }
 @media(max-width: 450px){
 	.container{

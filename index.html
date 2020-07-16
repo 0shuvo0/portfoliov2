@@ -7,6 +7,7 @@
 	<meta name="theme-color" content="">
 	<meta name="author" content="MdShuvo">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/cubeslider.css">
 	<link rel="stylesheet" href="css/style.css">
 	<title>My Portfolio</title>
 </head>
@@ -40,7 +41,6 @@ width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 72
 <stop offset="0.0%" stop-color="#8F3AEE" stop-opacity="1.0"/><stop offset="97.60056%" stop-color="#FF73FF" stop-opacity="1.0"/></linearGradient></defs><path layer="1" fill="url(#gradient15)" d="M176.0,66.0C111.36676,109.64313,110.0,110.0,110.0,110.0C110.0,110.0,110.0,198.0,110.0,198.0C176.86107,243.33371,176.0,242.0,176.0,242.0C242.53838,198.80475,242.0,198.0,242.0,198.0C242.6821,111.08357,242.0,110.0,242.0,110.0C242.0,110.0,176.0,66.0,176.0,66.0"/>
 </svg>
 		<div class="dp">
-			<!---->
 			<div class="img-box">
 				<div class="ball"></div>
 				<div class="ball"></div>
@@ -135,12 +135,48 @@ width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 72
 	</div>
 	
 	
-	<div class="container project-container" id="projects">
-		<h1>Previous projects</h1>
-		<div class="projects">
-			
+	<div class="container main-projects-contaner" id="projects">
+		<h1>My Projects</h1>
+		<div class="main-projects">
+			<div class="main-project">
+				<div class="info">
+					<h1>Recipe Website</h1>
+					<p>A recipe website design made with VueJs, Its completely responsive and modern. It has a lot of theme and customization settings. </p>
+					<a class="btn primary" href="https://0shuvo0.github.io/foodieshub/">Visit site</a>
+				</div>
+				<div class="img">
+					<div class="cube-slider recipe-slider"></div>
+				</div>
+			</div>
+			<div class="main-project">
+				<div class="img">
+					<div class="cube-slider quiz-slider"></div>
+				</div>
+				<div class="info">
+					<h1>Quiz app</h1>
+					<p>A PWA web app made with Vuejs for frontend, Nodejs for backend and MongoDB for database.</p>
+					<a class="btn primary" href="https://whispering-depths-92772.herokuapp.com">Visit site</a>
+				</div>
+			</div>
+			<div class="main-project">
+				<div class="info">
+					<h1>DailyDiary</h1>
+					<p>A website made with VueJs, NodeJs & Sequelize. In this website you can create and share diaries.</p>
+					<a class="btn" href="#!" style="color: #9F9F9F">offline</a>
+				</div>
+				<div class="img">
+					<div class="cube-slider diary-slider"></div>
+				</div>
+			</div>
 		</div>
 	</div>
+	
+	
+	<div class="container project-container">
+		<h1>Others projects</h1>
+		<div class="projects"></div>
+	</div>
+	
 	
 	<div class="container quote">
 		<div class="quote-container">
@@ -172,6 +208,7 @@ width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 72
 	</footer>
 	
 	<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+	<script src="js/cubeslider.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

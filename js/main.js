@@ -1,6 +1,5 @@
 /*
 Yes I let everyone see my firebase credentials, why did you asked?
-*/
 var config = {
     apiKey: "AIzaSyAx-GMJnaEZeslT7eOUg5cJexbhCN5caUw",
     authDomain: "messages-93ae7.firebaseapp.com",
@@ -13,7 +12,7 @@ var config = {
 firebase.initializeApp(config)
 
 var messagesRef = firebase.database().ref('messages')
-
+*/
 
 
 
@@ -152,5 +151,31 @@ function saveMessage(uid, email, msg){
 
 window.addEventListener('DOMContentLoaded', function(){
 	onScroll('.scroll-reveal');
-	document.body.removeChild($('#loader'))
+	
+	initCubeSlider({
+		el: '.recipe-slider',
+		slides: ["images/projects/main/recipe/1.jpg", "images/projects/main/recipe/2.jpg", "images/projects/main/recipe/3.jpg", "images/projects/main/recipe/4.jpg", "images/projects/main/recipe/5.jpg", "images/projects/main/recipe/6.jpg"],
+		controls: true,
+		row: 3,
+		col: 2,
+		interval: 3500
+	})
+	initCubeSlider({
+		el: '.quiz-slider',
+		slides: ["images/projects/main/quiz/1.jpg", "images/projects/main/quiz/2.jpg", "images/projects/main/quiz/3.jpg", "images/projects/main/quiz/4.jpg", "images/projects/main/quiz/5.jpg", "images/projects/main/quiz/6.jpg"],
+		controls: true,
+		interval: 3000
+	})
+	initCubeSlider({
+		el: '.diary-slider',
+		slides: ["images/projects/main/diary/1.jpg", "images/projects/main/diary/2.jpg", "images/projects/main/diary/3.jpg", "images/projects/main/diary/4.jpg", "images/projects/main/diary/5.jpg", "images/projects/main/diary/6.jpg"],
+		row: 1,
+		col: 1,
+		transition: 500,
+		size: 250
+	})
+	
+	setTimeout(function(){
+		document.body.removeChild($('#loader'))
+	}, 500)
 })
