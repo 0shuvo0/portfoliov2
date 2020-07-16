@@ -1,5 +1,6 @@
 /*
 Yes I let everyone see my firebase credentials, why did you asked?
+*/
 var config = {
     apiKey: "AIzaSyAx-GMJnaEZeslT7eOUg5cJexbhCN5caUw",
     authDomain: "messages-93ae7.firebaseapp.com",
@@ -12,7 +13,7 @@ var config = {
 firebase.initializeApp(config)
 
 var messagesRef = firebase.database().ref('messages')
-*/
+
 
 
 
