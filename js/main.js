@@ -159,10 +159,14 @@ window.addEventListener('DOMContentLoaded', function(){
 		controls: true,
 		row: 3,
 		col: 2,
+		size: 30,
+		unit: '%',
 		interval: 3500
 	})
 	initCubeSlider({
 		el: '.quiz-slider',
+		size: 30,
+		unit: '%',
 		slides: ["images/projects/main/quiz/1.jpg", "images/projects/main/quiz/2.jpg", "images/projects/main/quiz/3.jpg", "images/projects/main/quiz/4.jpg", "images/projects/main/quiz/5.jpg", "images/projects/main/quiz/6.jpg"],
 		controls: true,
 		interval: 3000
@@ -172,8 +176,9 @@ window.addEventListener('DOMContentLoaded', function(){
 		slides: ["images/projects/main/diary/1.jpg", "images/projects/main/diary/2.jpg", "images/projects/main/diary/3.jpg", "images/projects/main/diary/4.jpg", "images/projects/main/diary/5.jpg", "images/projects/main/diary/6.jpg"],
 		row: 1,
 		col: 1,
+		size: 98,
+		unit: '%',
 		transition: 500,
-		size: 250
 	})
 	
 	setTimeout(function(){
