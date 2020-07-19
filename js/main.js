@@ -176,8 +176,7 @@ window.addEventListener('DOMContentLoaded', function(){
 		slides: ["images/projects/main/diary/1.jpg", "images/projects/main/diary/2.jpg", "images/projects/main/diary/3.jpg", "images/projects/main/diary/4.jpg", "images/projects/main/diary/5.jpg", "images/projects/main/diary/6.jpg"],
 		row: 1,
 		col: 1,
-		size: 98,
-		unit: '%',
+		size: 300,
 		transition: 500,
 	})
 	
