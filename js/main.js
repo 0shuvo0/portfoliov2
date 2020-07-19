@@ -48,9 +48,9 @@ function $(v){
 
 var projects = [
 	{
-		img: 'cooking.jpg',
-		link: 'https://0shuvo0.github.io/foodieshub/',
-		desc: 'Its a design of a cooking website where users can share their recipe and other peoples try it out and leave their option.',
+		img: 'cubeslider.jpg',
+		link: 'https://github.com/0shuvo0/cubeslider',
+		desc: 'CubeSlider is a easy to use library to easily create awesome 3d cubic image slider.',
 	},
 	{
 		img: 'blog.jpg',
