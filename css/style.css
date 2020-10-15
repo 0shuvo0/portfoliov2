@@ -362,11 +362,18 @@ button, input, textarea {
   background-position: center;
   color: transparent;
 }
-.typography .indicator, .typography .btn {
+.typography .indicator, .typography .btn.main {
   background: url("../images/text-banner.jpg");
   background-size: cover;
   background-position: center;
   color: #fff;
+}
+.typography .indicator, .typography .btn.resume {
+  box-shadow: none;
+  color: #8B12EB;
+  font-weight: bold;
+  text-decoration: underline;
+  letter-spacing: 1px;
 }
 .typography p {
   font-size: 0.8em;
@@ -911,7 +918,6 @@ button, input, textarea {
   .container {
     padding: 0 7vw;
   }
-
   .banner {
     min-height: auto;
   }
