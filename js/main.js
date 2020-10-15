@@ -100,15 +100,15 @@ for(var i = 0; i < projects.length; i++){
 
 
 
-var submitBtn = $('#send');
-var err = $('.form-err');
+var submitBtn = $('#send')
+var err = $('.form-err')
 submitBtn.onclick = function(){
 	err.innerText = "This feature doesn't yet work. Email me at mdandshuvo@gmail.com"
 }
 
 
 window.addEventListener('DOMContentLoaded', function(){
-	onScroll('.scroll-reveal');
+	onScroll('.scroll-reveal')
 	
 	initCubeSlider({
 		el: '.recipe-slider',
