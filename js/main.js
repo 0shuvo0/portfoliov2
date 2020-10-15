@@ -1,20 +1,3 @@
-/*
-Yes I let everyone see my firebase credentials, why did you asked?
-*/
-var config = {
-    apiKey: "AIzaSyAx-GMJnaEZeslT7eOUg5cJexbhCN5caUw",
-    authDomain: "messages-93ae7.firebaseapp.com",
-    databaseURL: "https://messages-93ae7.firebaseio.com",
-    projectId: "messages-93ae7",
-    storageBucket: "messages-93ae7.appspot.com",
-    messagingSenderId: "746022405342",
-    appId: "1:746022405342:web:78d3e415ceb85195e82e4f"
-}
-firebase.initializeApp(config)
-
-var messagesRef = firebase.database().ref('messages')
-
-
 
 
 
@@ -118,35 +101,9 @@ for(var i = 0; i < projects.length; i++){
 
 
 var submitBtn = $('#send');
-var uid = $('#uid');
-var email = $('#email');
-var msg = $('#msg');
 var err = $('.form-err');
 submitBtn.onclick = function(){
-	if(!uid.value.trim() || !email.value.trim() || !msg.value.trim()){
-		err.innerText = "Fill in all fields"
-		return
-	}
-	err.innerText = ""
-	this.innerHTML = '<i class="fas fa-spinner"></i>'
-	saveMessage(uid.value.trim(), email.value.trim(), msg.value.trim());
-	this.innerHTML = 'sent <i class="fas fa-check"></i>'
-	uid.value = ""
-	email.value = ""
-	msg.value = ""
-	setTimeout(function(){
-		submitBtn.innerHTML = 'Submit'
-	}, 1000)
-}
-
-
-function saveMessage(uid, email, msg){
-  var newMessageRef = messagesRef.push();
-  newMessageRef.set({
-    uid: uid,
-    email: email,
-    msg: msg
-  })
+	err.innerText = "This feature doesn't yet work. Email me at mdandshuvo@gmail.com"
 }
 
 
