@@ -1,11 +1,12 @@
-
-
-
-function addObserver(el, ops){
+function addObserver(el, ops = {}){
 	var observer = new IntersectionObserver(function (entries, observer){
 		entries.forEach(function (entry){
 			if(entry.isIntersecting){
-				entry.target.classList.add('active');
+				if(ops.fn){
+					ops.fn(entry.target);
+				}else{
+					entry.target.classList.add('active');
+				}
 				observer.unobserve(entry.target);
 			}
 		});
@@ -95,7 +96,7 @@ var projects = [
 var projectsContainer = $('.projects')
 for(var i = 0; i < projects.length; i++){
 	var p = projects[i]
-	projectsContainer.innerHTML += '<div class="project scroll-reveal"><div class="content-box" style="background-image: url(\'images/projects/' + p.img + '\')"><div class="content"><p>' + p.desc + '</p></div></div><a href="' + p.link + '" target="_blank" class="btn primary block tile">visit site</a></div>'
+	projectsContainer.innerHTML += '<div class="project scroll-reveal scroll-reveal-img"><div class="content-box" data-img="' + p.img + '"><div class="content"><p>' + p.desc + '</p></div></div><a href="' + p.link + '" target="_blank" class="btn primary block tile">visit site</a></div>'
 }
 
 
@@ -103,38 +104,41 @@ for(var i = 0; i < projects.length; i++){
 var submitBtn = $('#send')
 var err = $('.form-err')
 submitBtn.onclick = function(){
-	err.innerText = "This feature doesn't yet work. Email me at mdandshuvo@gmail.com"
+	err.innerText = "This feature doesn't yet work. Email me at 0mdshuvo0@gmail.com"
 }
 
 
 window.addEventListener('DOMContentLoaded', function(){
 	onScroll('.scroll-reveal')
 	
-	initCubeSlider({
-		el: '.recipe-slider',
-		slides: ["images/projects/main/recipe/1.jpg", "images/projects/main/recipe/2.jpg", "images/projects/main/recipe/3.jpg", "images/projects/main/recipe/4.jpg", "images/projects/main/recipe/5.jpg", "images/projects/main/recipe/6.jpg"],
-		controls: true,
-		row: 3,
-		col: 2,
-		size: 30,
-		unit: '%',
-		interval: 3500
+	onScroll('.scroll-reveal-slider', {
+		rootMargin: '300px',
+		fn: function(e){
+			var slider = e.getAttribute('data-slider')
+			var rowcol = e.getAttribute('data-dim').split(" ")
+			var slides = []
+			for(let i = 1; i < 7; i++){
+				slides.push("images/projects/main/" + slider + "/" + i + ".jpg")
+			}
+			initCubeSlider({
+				el: '[data-slider="' + slider + '"]',
+				slides: slides,
+				controls: (slider != "diary"),
+				row: rowcol[0],
+				col: rowcol[1],
+				size: (slider == "diary") ? 300 : 30,
+				unit: (slider == "diary") ? 'px' : '%',
+				interval: 3500 + Math.round(Math.random() * 501)
+			})
+		}
 	})
-	initCubeSlider({
-		el: '.quiz-slider',
-		size: 30,
-		unit: '%',
-		slides: ["images/projects/main/quiz/1.jpg", "images/projects/main/quiz/2.jpg", "images/projects/main/quiz/3.jpg", "images/projects/main/quiz/4.jpg", "images/projects/main/quiz/5.jpg", "images/projects/main/quiz/6.jpg"],
-		controls: true,
-		interval: 3000
-	})
-	initCubeSlider({
-		el: '.diary-slider',
-		slides: ["images/projects/main/diary/1.jpg", "images/projects/main/diary/2.jpg", "images/projects/main/diary/3.jpg", "images/projects/main/diary/4.jpg", "images/projects/main/diary/5.jpg", "images/projects/main/diary/6.jpg"],
-		row: 1,
-		col: 1,
-		size: 300,
-		transition: 500,
+	
+	onScroll('.scroll-reveal-img', {
+		rootMargin: '150px',
+		fn: function(e){
+			var img = e.querySelector('.content-box')
+			img.style.backgroundImage = "url('images/projects/" + img.getAttribute('data-img') + "')"
+		}
 	})
 	
 	setTimeout(function(){

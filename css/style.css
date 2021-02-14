@@ -368,7 +368,7 @@ button, input, textarea {
   background-position: center;
   color: #fff;
 }
-.typography .indicator, .typography .btn.resume {
+.typography .btn.resume {
   box-shadow: none;
   color: #8B12EB;
   font-weight: bold;
@@ -918,6 +918,7 @@ button, input, textarea {
   .container {
     padding: 0 7vw;
   }
+
   .banner {
     min-height: auto;
   }

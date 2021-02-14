@@ -83,11 +83,18 @@
 		background-position: center;
 		color: transparent;
 	}
-	.indicator, .btn{
+	.indicator, .btn.main{
 		background: url('../images/text-banner.jpg');
 		background-size: cover;
 		background-position: center;
 		color: #fff;
+	}
+	.btn.resume{
+		box-shadow: none;
+		color: #8B12EB;
+		font-weight: bold;
+		text-decoration: underline;
+		letter-spacing: 1px;
 	}
 	p{
 		font-size: 0.8em;
