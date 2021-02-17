@@ -1,4 +1,4 @@
-function addObserver(el, ops = {}){
+function addObserver(el, ops){
 	var observer = new IntersectionObserver(function (entries, observer){
 		entries.forEach(function (entry){
 			if(entry.isIntersecting){
@@ -19,7 +19,7 @@ function onScroll(selector, ops = {rootMargin: "0px 0px -100px 0px"}){
 	for(var i = 0; i < els.length; i++){
 		var el = els[i];
 		if(!('IntersectionObserver' in window)) {
-			el.classList.add('active')
+			ops.fn ? ops.fn(el) : el.classList.add('active')
 			continue
 		}
 		addObserver(el, ops);
